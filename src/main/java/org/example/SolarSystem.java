@@ -28,9 +28,10 @@ public class SolarSystem {
             System.out.println("This system has parent star: "+this.star.getName()+" which is a "+star.getType()
             + " star and it burns at "+this.star.getTemp()+" Kelvin.");
 
-            System.out.println("The current planets in the system are owned by you :\n");
+            System.out.println("Displaying information about the planet "+planetHashMap.get(current_Planet).getName()+" :");
             System.out.println(planetHashMap.get(current_Planet).getName()+"'s surface temperature is "
-                    +planetHashMap.get(current_Planet).getSurfaceTemperature());
+                    +planetHashMap.get(current_Planet).getSurfaceTemperature()+" degrees celsius");
+            System.out.println("current population "+planetHashMap.get(current_Planet).getPopulation().getCount()+" people");
             return true;
         }
         return false;

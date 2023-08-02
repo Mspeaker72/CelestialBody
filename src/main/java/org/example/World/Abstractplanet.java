@@ -6,7 +6,7 @@ import org.example.Position;
 public class Abstractplanet {
 
     private Position startingPos;
-    private Population population;
+    private Population population = new Population(100000);
     private int food;
     private int capital_resources;
 
@@ -42,6 +42,14 @@ public class Abstractplanet {
 
     public int getSurfaceTemperature(){
         return temperature;
+    }
+
+    public Population getPopulation() {
+        return population;
+    }
+
+    public Position getStartingPos() {
+        return startingPos;
     }
 
     public int getDistance_from_star() {
