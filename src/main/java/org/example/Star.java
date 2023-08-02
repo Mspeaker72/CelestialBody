@@ -14,6 +14,7 @@ public class Star {
 
     private final Position CENTRE = new Position(0,0);
 
+
     private String colour;
 
     private HashMap<String,Integer> starinfo = new HashMap<>();
