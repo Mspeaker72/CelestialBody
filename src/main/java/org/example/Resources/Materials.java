@@ -12,13 +12,18 @@ public class Materials implements Resource {
     }
 
     @Override
-    public int reduce() {
-        return 0;
+    public int reduce(int count) {
+        this.amount = amount-count;
+        return amount;
     }
 
-    @Override
-    public int increase() {
-        return 0;
+    public void setAmount(int amount) {
+        this.amount = amount;
+    }
+
+    public int increase(int count) {
+        this.amount = amount+count;
+        return amount;
     }
 
     @Override

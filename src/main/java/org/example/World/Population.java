@@ -8,6 +8,9 @@ public class Population {
         this.count = pop;
     }
 
+    public void setCount(int count) {
+        this.count = count;
+    }
 
     public int getCount() {
         return count;

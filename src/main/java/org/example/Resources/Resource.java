@@ -4,9 +4,9 @@ public interface Resource {
 
     public int getAmount();
 
-    public int reduce();
+    public int reduce(int count);
 
-    public int increase();
+    public int increase(int count);
 
     public Boolean RandomEvent();
 

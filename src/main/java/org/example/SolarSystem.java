@@ -1,5 +1,6 @@
 package org.example;
 import org.example.Database.NameValidator;
+import org.example.Events.AsteroidImpact;
 import org.example.commands.View_info;
 
 import java.io.IOException;
@@ -45,10 +46,15 @@ public class SolarSystem {
         this.planetHashMap.put(planet.getName(),planet);
     }
 
+
     public void creation() throws IOException {
         starnamingconvention();
         this.star.buildstar();
         setupSystem();
+        hasStar();
+        AsteroidImpact asteroidImpact = new AsteroidImpact(planetHashMap.get(current_Planet));
+        asteroidImpact.triggerPopulation();
+        asteroidImpact.trigger(planetHashMap.get(current_Planet).getLand());
         hasStar();
         System.exit(-1);
     }

@@ -12,13 +12,14 @@ public class Land implements Resource{
     }
 
     @Override
-    public int reduce() {
-        return 0;
+    public int reduce(int count) {
+        this.amount = amount-count;
+        return amount;
     }
 
-    @Override
-    public int increase() {
-        return 0;
+    public int increase(int count) {
+        this.amount = amount+count;
+        return amount;
     }
 
     @Override

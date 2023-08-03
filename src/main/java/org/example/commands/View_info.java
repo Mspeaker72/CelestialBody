@@ -18,6 +18,7 @@ public class View_info {
     }
 
     public void display(){
+        System.out.println("--------------------------------------------------------------\n");
         System.out.println("Displaying information about the planet "+planetHashMap.get(current_Planet).getName()+" :");
         System.out.println(planetHashMap.get(current_Planet).getName()+"'s surface temperature is "
                 +planetHashMap.get(current_Planet).getSurfaceTemperature()+" degrees celsius");
@@ -34,6 +35,7 @@ public class View_info {
 
     public void hasStar(Star parent_star) {
         this.star = parent_star;
+        System.out.println("--------------------------------------------------------------\n");
         System.out.println("This system has parent star: "+this.star.getName()+" which is a "+star.getType()
                 + " star and it burns at "+this.star.getTemp()+" Kelvin.");
     }
