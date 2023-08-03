@@ -25,6 +25,11 @@ public class View_info {
 
         System.out.println("The the current position of the planet: "+planetHashMap.get(current_Planet)
                 .getCurrentPos().getX()+","+planetHashMap.get(current_Planet).getCurrentPos().getY());
+
+        System.out.println("These are the current resources at your disposal the planet: \n"+
+                "Food : "+planetHashMap.get(current_Planet).getFood().getAmount()
+        +"\n"+"Land : "+planetHashMap.get(current_Planet).getLand().getAmount()+"\n"+
+                "Materials : "+planetHashMap.get(current_Planet).getMaterials().getAmount());
     }
 
     public void hasStar(Star parent_star) {

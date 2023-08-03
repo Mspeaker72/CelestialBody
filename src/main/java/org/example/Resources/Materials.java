@@ -1,9 +1,14 @@
 package org.example.Resources;
 
 public class Materials implements Resource {
+    private int amount;
+
+    public Materials(int amount){
+        this.amount = amount;
+    }
     @Override
     public int getAmount() {
-        return 0;
+        return amount;
     }
 
     @Override
