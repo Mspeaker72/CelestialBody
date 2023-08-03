@@ -1,5 +1,6 @@
 package org.example;
 import org.example.Database.NameValidator;
+import org.example.commands.View_info;
 
 import java.io.IOException;
 import java.util.*;
@@ -14,6 +15,8 @@ public class SolarSystem {
     String current_Planet;
 
 
+
+
     public Scanner getScanner() {
         return scanner;
     }
@@ -25,13 +28,9 @@ public class SolarSystem {
 
     public boolean hasStar(){
         if(this.star!=null){
-            System.out.println("This system has parent star: "+this.star.getName()+" which is a "+star.getType()
-            + " star and it burns at "+this.star.getTemp()+" Kelvin.");
-
-            System.out.println("Displaying information about the planet "+planetHashMap.get(current_Planet).getName()+" :");
-            System.out.println(planetHashMap.get(current_Planet).getName()+"'s surface temperature is "
-                    +planetHashMap.get(current_Planet).getSurfaceTemperature()+" degrees celsius");
-            System.out.println("current population "+planetHashMap.get(current_Planet).getPopulation().getCount()+" people");
+            View_info view = new View_info(planetHashMap,current_Planet) ;
+            view.hasStar(star);
+            view.display();
             return true;
         }
         return false;

@@ -5,10 +5,11 @@ import org.example.Position;
 
 public class Abstractplanet {
 
-    private Position startingPos;
-    private Population population = new Population(100000);
+    private Population population = new Population(1000);
     private int food;
     private int capital_resources;
+
+    private Position currentPos;
 
     private int distance_from_star;
     private String name;
@@ -19,12 +20,18 @@ public class Abstractplanet {
     //this counts for land etc.
 
     public Abstractplanet(String name){
+
         this.name = name;
+        this.currentPos = new Position(100,0);
+        this.distance_from_star = currentPos.getMaxDistance();
+
     }
 
-    public Position getPosition(){
-        return startingPos;
+    public Position getCurrentPos() {
+        return currentPos;
     }
+
+    public void orbit(){}
 
     public String getName() {
         return name;
@@ -48,12 +55,9 @@ public class Abstractplanet {
         return population;
     }
 
-    public Position getStartingPos() {
-        return startingPos;
-    }
 
     public int getDistance_from_star() {
-        return 100;
+        return distance_from_star;
     }
 
     public double getPercentageOfReflectedLight() {

@@ -20,6 +20,10 @@ public class Position {
         return x;
     }
 
+    public int getMaxDistance(){
+        return x;
+    }
+
     public void decrementY(){
         this.y--;
     }
