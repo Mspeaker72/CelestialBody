@@ -2,6 +2,8 @@ package org.example.commands;
 
 import org.example.Planet;
 import org.example.Star;
+import org.example.World.People;
+import org.example.World.Trait;
 
 import java.util.HashMap;
 
@@ -38,5 +40,12 @@ public class View_info {
         System.out.println("--------------------------------------------------------------\n");
         System.out.println("This system has parent star: "+this.star.getName()+" which is a "+star.getType()
                 + " star and it burns at "+this.star.getTemp()+" Kelvin.");
+    }
+
+    public void peopleOfInterest(People people){
+        System.out.println("--------------------------------------------------------\n");
+        System.out.println("Notable citizens \n");
+        System.out.println(people.getIndividual()+" has the ability : "+people.getTrait("Black Jack"));
+
     }
 }

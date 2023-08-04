@@ -9,4 +9,10 @@ public interface Events {
 
     public void triggerPopulation();
 
+    public void sysOut();
+
+
+
+    public void execute();
+
 }

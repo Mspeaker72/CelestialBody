@@ -1,6 +1,9 @@
 package org.example.World;
 
+import java.util.HashMap;
+
 public class Population {
+
 
     private int count;
 

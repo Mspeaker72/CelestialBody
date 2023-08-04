@@ -16,4 +16,14 @@ public class disease extends diseases implements Events{
     public void triggerPopulation() {
 
     }
+
+    @Override
+    public void sysOut() {
+
+    }
+
+    @Override
+    public void execute() {
+
+    }
 }

@@ -8,6 +8,8 @@ public class AsteroidImpact implements Events{
     Population population;
     Planet planet ;
 
+    Resource resource;
+
 
     public AsteroidImpact(Planet planet){
        this.population = planet.getPopulation();
@@ -31,6 +33,17 @@ public class AsteroidImpact implements Events{
         this.planet.getPopulation().setCount(currentPopulation/2);
         this.planet.getMaterials().increase(2500);
 
+    }
+
+    @Override
+    public void sysOut() {
+        System.out.println("------------------------------------------------------------");
+        System.out.println("Event: Meteor has crashed into you planet ! ");
+    }
+
+    @Override
+    public void execute() {
+        sysOut();
     }
 
 
