@@ -55,7 +55,7 @@ public class TempAndType {
     }
 
     public static void main(String[] args) throws IOException {
-        TempAndType type = new TempAndType("Yellow%20Dwarf");
+        TempAndType type = new TempAndType("Blue%20Giant");
         System.out.println(type.getType());
         System.out.println(type.getDegreesKelvin());
     }

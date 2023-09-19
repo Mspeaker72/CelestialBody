@@ -73,6 +73,8 @@ public class SolarSystem {
         setupSystem();
         hasStar();
         generateCitizen();
+        RandomEvent();
+        hasStar();
         System.exit(-1);
     }
 }

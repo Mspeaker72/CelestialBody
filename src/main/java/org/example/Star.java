@@ -26,7 +26,7 @@ public class Star {
     }
 
     public void buildstar() throws IOException {
-        TempAndType tempAndType = new TempAndType("Yellow%20Dwarf");
+        TempAndType tempAndType = new TempAndType("Blue%20Giant");
         this.type = tempAndType.getType();
         this.temp = tempAndType.getDegreesKelvin();
 
